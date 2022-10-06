@@ -1,0 +1,25 @@
+data_arini=read.csv("C:/Users/ALEFIA RINI/Videos/statistika.csv", sep = ",")
+View(data_arini)
+arini <- data_arini[data_arini$tinggi.badan==168,]
+View(arini)
+data_arini$Tinggi.Badan <- ifelse(data_arini$Tinggi.Badan >160,c("tinggi"),c("pendek"))
+View(arini)
+data_arini$Jurusan <- c("Infor20")
+data_arini$Fakultas<- c("FTI")
+View(data_arini)
+data_arini$Fakultas<-NULL
+View(data_arini)
+data_arini.namagen <- data_arini[1:2]
+View(data_arini.namagen)
+data_arini.namagen1 <- data_arini[3:4]
+View(data_arini.namagen1)
+data_arini.gabungan<-cbind(data_arini.namagen,data_arini.namagen1)
+View(data_arini.gabungan)
+data_baris_arini.1sampai5<-data_arini[1:5,]
+View(data_baris_arini.1sampai5)
+data_baris_arini.25sampai30<-data_arini[25:30,]
+View(data_baris_arini.25sampai30)
+data_baris_arini.1sampai5dan25sampai30<-rbind(data_baris_arini.1sampai5,data_baris_arini.25sampai30)
+View(data_baris_arini.1sampai5dan25sampai30)
+data_arini.sort<-data_arini[order(data_arini$Waktu.Perjalanan),]
+View(data_arini.sort)
